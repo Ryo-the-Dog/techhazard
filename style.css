@@ -1,0 +1,446 @@
+/*========================================
+  共通
+========================================*/
+body{
+	color: #fefefe;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;	
+}
+div,form,h1,h2,h3,p,button,a{
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*========================================
+  フォント
+========================================*/
+/*========================================
+  ボタン
+========================================*/
+button{
+	border: none;
+	background-color: #090909;
+	color: #fefefe;
+	cursor: pointer;
+	opacity: 0.8;
+}
+button:hover{
+	color: #fff;
+	opacity: 1.0;
+}
+div.opening-container button{
+	width: 49%;
+}
+div.opening-container button:not(:last-child){
+	margin-right: 1%;
+}
+/*========================================
+  共通画面
+========================================*/
+div.main{
+	background-color: #090909;
+	max-width: 1024px;
+	height: 720px;
+	margin: 0 auto;
+}
+/*========================================
+  オープニング画面
+========================================*/
+div.opening-container{
+	padding: 40px;
+	text-align: center;
+}
+div.opening-container h1{
+	color: #cc0000;
+	font-size: 3rem;
+	margin-bottom: 32px;
+}
+div.opening-container h2{
+	font-weight: normal;
+	font-size: 1.5rem;
+	margin-bottom: 32px;
+}
+div.opening-container .tips{
+	margin-bottom: 32px;
+}
+div.opening-container .tips p:first-child{
+	font-size: 1.5rem;
+	margin-bottom: 12px;
+}
+div.opening-container .select-player-area{
+	display: flex;
+	width: 90%;
+	margin:20px auto 0;
+}
+div.opening-container .player-container{
+	display: flex;
+	border: solid 1px #fefefe;
+	width: 100%;
+	height: 216px;
+	padding: 16px;
+}
+/*中身の上下中央揃え用*/
+div.opening-container .player-container .player-inner{
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+}
+div.opening-container .player-container .player-img-area{
+	width: 144px;
+	margin-right: 32px;
+}
+div.opening-container .player-container .player-img-area img{
+	width: 100%;
+	height: 144px;
+}
+div.opening-container .player-container p{
+	font-size: 20px;
+}
+div.opening-container .player-container .player-status-container p{
+	margin-bottom: 12px;
+	text-align: left;
+}
+/*========================================
+  メイン画面
+========================================*/
+/* タイトルエリア
+========================================*/
+div.title-area{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	width: 100%;
+	height: 48px;
+}
+div.title-area h1{
+	color: #cc0000;
+	padding-left: 12px;
+	margin-right: 8px;
+}
+/* 敵表示エリア
+========================================*/
+div.battle-area.approach{
+	background:url(img/battle_field.png) no-repeat;
+	background-size: 120% 450px;
+	background-position: center;
+	width: 100%;
+	height: 408px;
+	text-align: center;
+}
+div.battle-area.away{
+	background:url(img/battle_field.png) no-repeat;
+	background-size: 100% 408px;
+	background-position: center;
+	width: 100%;
+	height: 408px;
+	text-align: center;
+}
+div.battle-area .enemy-status-area{
+	padding-top: 4px;
+}
+div.battle-area .enemy-img-area{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 360px;
+	line-height: 360px;
+	position: relative;
+}
+div.battle-area .enemy-img-area img.zombie-img{
+	position: absolute;
+	bottom: 0;
+}
+div.battle-area .enemy-img-area img.js-knife-wound{
+	display: none;
+	position: absolute;
+	bottom: 124px;
+}
+div.battle-area .enemy-img-area img.js-bullet-wound{
+	display: none;
+	position: absolute;
+	bottom: 124px;
+}
+div.battle-area .enemy-img-area img.approach{
+	width: 252px;
+}
+div.battle-area .enemy-img-area img.away{
+	width: 180px;
+	bottom: 20px;
+}
+/* プレイヤー用エリアのレイアウト
+========================================*/
+div.player-area{
+	display: flex;
+}
+div.player-area .player-wrapper{
+	width: 32%;
+}
+div.player-area .msg-wrapper{
+	border: solid 1px #fefefe;
+	width: 66%;
+	height: 256px;
+	margin-top: 4px;
+	margin-right: 7px;
+	margin-left: 7px;
+}
+/*プレイヤー情報
+========================================*/
+div.player-area .player-information-wrapper{
+	border: solid 1px #fefefe;
+	width: 100%;
+	height: 126px;
+	padding: 12px 16px;
+	margin-top: 4px;
+}
+div.player-area .player-information-wrapper .player-information-inner{
+	display: flex;
+	width: 85%;
+	margin: 0 auto;
+}
+div.player-area .player-img-area{
+	width: 120px;
+	height: 104px;
+	margin-right: 16px;
+}
+div.player-area .player-img-area img{
+	height: 106px;
+}
+div.player-area .player-status-container p{
+	margin-bottom: 12px;
+}
+/*バトルコマンド
+========================================*/
+div.player-area .command-wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border: solid 1px #fefefe;
+	width: 100%;
+	height: 126px;
+	margin-top: 4px;
+}
+div.player-area .command-wrapper button{
+	font-size: 1.2rem;
+	margin-bottom: 12px;
+	text-align: left;
+}
+div.player-area .command-wrapper button[name="vaccine_submit"],
+div.player-area .command-wrapper button[name="away_submit"],
+div.player-area .command-wrapper button[name="gun_submit"]{
+	margin-bottom: 0;
+}
+div.player-area .command-wrapper p{
+	font-size: 1rem;
+	text-indent: 20px;
+}
+div.player-area .command-wrapper .command{
+	display: flex;
+	flex-direction: column;
+	height: 80px;
+}
+/* メッセージエリア
+========================================*/
+div.player-area .msg-wrapper{
+	padding: 12px;
+	overflow-y: scroll;
+}
+/*========================================
+  ゲームオーバー画面
+========================================*/
+div.gameover-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 720px;
+}
+div.gameover-container h1{
+	color: #cc0000;
+	margin-bottom: 40px;
+	text-align: center;
+}
+div.gameover-container p{
+	margin-bottom: 8px;
+}
+div.gameover-container button,
+div.gameover-container a{
+	font-size: 24px;
+}
+div.gameover-container a{
+	color: #fefefe;
+	text-decoration: none;
+	opacity: 0.8;
+}
+div.gameover-container a:hover{
+	opacity: 1.0;
+}
+div.gameover-container form{
+	display: flex;
+	justify-content: space-between;
+}
+/*========================================
+  レスポンシブ
+========================================*/
+@media screen and (max-width: 980px){
+	/* 共通画面
+	========================================*/
+	div.main{
+		height: auto;
+	}
+	/* オープニング画面
+	========================================*/
+	div.opening-container .select-player-area{
+		flex-direction: column;
+		width: 90%;
+		margin:20px auto 0;
+	}
+	div.opening-container button{
+		width: 100%;
+	}
+	div.opening-container button:not(:last-child){
+		margin: 0 0 20px;
+	}
+	/* メイン画面
+	========================================*/
+	div.player-area{
+		display: flex;
+		flex-direction: column;
+		width: 99%;
+		padding-bottom: 4px;
+		margin: 0 auto;
+	}
+	div.player-area .player-wrapper{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	div.player-area .player-wrapper .player-information-wrapper{
+		order: 2;
+	}
+	div.player-area .player-wrapper form{
+		order: 1;
+	}
+	div.player-area .msg-wrapper{
+		width: 100%;
+		height: 126px;
+		padding: 4px;
+		margin-left: 0;
+		text-align: center;
+	}
+	div.player-area .command-wrapper button{
+		margin-bottom: 16px;
+	}
+	div.player-area .player-information-wrapper .player-information-inner{
+		display: flex;
+		justify-content: center;
+		width: 85%;
+		margin: 0 auto;
+	}
+	div.player-area .player-information-wrapper .player-information-inner p{
+		margin-right: 20px;
+	}
+}
+@media screen and (max-width: 480px){
+	/* ボタン
+	========================================*/
+	button,
+	div.gameover-container a{
+		opacity: 1.0;
+	}
+	div.player-area .command-wrapper button{
+		font-size: 1rem;
+	}
+	div.player-area .command-wrapper p{
+		font-size: 0.8rem;
+		text-indent: 16px;
+	}
+	/* オープニング画面
+	========================================*/
+	div.opening-container{
+		padding: 8px;
+	}
+	div.opening-container h1{
+		font-size: 2rem;
+		margin-bottom: 16px;
+	}
+	div.opening-container h2{
+		font-size: 1.2rem;
+		margin-bottom: 12px;
+	}
+	div.opening-container .tips p:first-child{
+		font-size: 1rem;
+		margin-bottom: 4px;
+	}
+	div.opening-container .tips p:not(:first-child){
+		font-size: 0.9rem;
+	}
+	div.opening-container .player-container .player-status-container p{
+		font-size: 0.9rem;
+	}
+	div.opening-container .player-container .player-img-area{
+		margin-right: 8px;
+	}
+	/* メイン画面
+	========================================*/
+	div.title-area{
+		height: 28px;
+	}
+	div.title-area h1{
+		font-size: 1.5rem;
+	}
+	div.battle-area .enemy-status-area{
+		display: flex;
+		justify-content: center;
+		font-size: 0.8rem;
+	}
+	div.battle-area .enemy-status-area p{
+		margin-right: 8px;
+	}
+	div.battle-area.approach{
+		background:url(img/battle_field.png) no-repeat;
+		background-size: 120% 450px;
+		background-position: bottom;
+		width: 100%;
+		height: 240px;
+		text-align: center;
+	}
+	div.battle-area.away{
+		background:url(img/battle_field.png) no-repeat;
+		background-size: 100% 408px;
+		background-position: bottom;
+		width: 100%;
+		height: 240px;
+		text-align: center;
+	}
+	div.battle-area .enemy-img-area{
+		height: 213px;
+		line-height: 213px;
+	}
+	div.battle-area .enemy-img-area img.approach{
+		width: 158px;
+		bottom: -8px;
+	}
+	div.battle-area .enemy-img-area img.away{
+		width: 120px;
+		bottom: -8px;
+	}
+	div.battle-area .enemy-img-area img.js-knife-wound{
+		bottom: 52px;
+	}
+	div.battle-area .enemy-img-area img.js-bullet-wound{
+		bottom: 52px;
+	}
+	div.player-area .msg-wrapper{
+		font-size: 0.9rem;
+	}
+	div.player-area .player-information-wrapper{
+		padding: 12px 0;
+	}
+	/* ゲームオーバー画面
+	========================================*/
+	div.gameover-container{
+		height: 680px;
+	}
+}
