@@ -1,6 +1,9 @@
 # タイトル
 TECH HAZARD
 
+# 実物
+https://ryonexta.com/portfolio/techhazard/
+
 # 概要
 オブジェクト指向によるプログラミングで制作したゲームです。<br>
 コマンド選択式のRPGの戦闘のようなシステムです<br>
