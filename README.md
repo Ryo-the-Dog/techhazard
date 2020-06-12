@@ -1,7 +1,6 @@
 # タイトル
 TECH HAZARD
-
-# 実物
+<br>
 https://ryonexta.com/portfolio/techhazard/
 
 # 概要
